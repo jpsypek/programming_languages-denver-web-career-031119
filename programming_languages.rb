@@ -10,10 +10,8 @@ def reformat_languages(languages)
         if new_hash[language][type].nil?
           new_hash[language][type] = string
         end
-        if new_hash[language][:style].nil?
-          new_hash[language][:style] = []
-        end
-          new_hash[language][:style] << style
+        new_hash[language][:style] ||= []
+        new_hash[language][:style] << style
         }
       }
     }
